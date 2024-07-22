@@ -74,6 +74,8 @@ def validate_toml(file):
 def main():
     check_no_deleted_files()
     changed_files = get_all_modified_or_created_files()
+
+    print("Found {} file changed/added.".format(len(changed_files)))
     
     # only files changes in transactions with a specific format are allowed
     for file in changed_files:
