@@ -16,7 +16,7 @@ def check_no_deleted_or_modified_files():
         exit(1)
 
 def get_all_created_files():
-    res = subprocess.run(["git", "diff", "--name-only", "--diff-filter=AM", "origin/main"], stdout=subprocess.PIPE, stderr=subprocess.PIPE)
+    res = subprocess.run(["git", "diff", "--name-only", "--diff-filter=A", "origin/main"], stdout=subprocess.PIPE, stderr=subprocess.PIPE)
     if res.returncode > 0:
         exit(1)
     
