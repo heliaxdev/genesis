@@ -1,0 +1,37 @@
+[[established_account]]
+vp = "vp_user"
+threshold = 1
+public_keys = ["tpknam1qp5efx0w3sqkgngh5l4gt4hx9l07vha6vdn7twn9gd6khqvwqka9qgfpaw9"]
+
+[[validator_account]]
+address = "tnam1q8nzq9m5v8upn6jkjsljf25mzf2n9u7qfyc8kwje"
+vp = "vp_user"
+commission_rate = "0.01"
+max_commission_rate_change = "0.01"
+net_address = "3.76.122.127:26656"
+
+[validator_account.consensus_key]
+pk = "tpknam1qqsu9mms3jswxse4n3kx5w6gt885c20ufawhcgl55r9wsg4a865ycn8dyla"
+authorization = "signam1qz29zvt8rnrfy8refcyvnyy7eu0yct09suy0e6xvx2sua6wdtmx3dx2ulf5ctlan3gtyjqpcsk9zhfau0wwd25t8tp2vs9r3r9s6k8qtmcxsa3"
+
+[validator_account.protocol_key]
+pk = "tpknam1qp6q5ky0vkypfvrs2ulp8pu3tht3wdtlr5w6cn7s6zg5vzljf4pcvwdljw8"
+authorization = "signam1qq55cq98rnldled268mkqnjq7fst5p7jrx88e8vdajess6uczmhepqfnd8gdjt0360sd5946zrx5ftd6yg6ykw2lnw0lcn3uc86pndc8x9d73r"
+
+[validator_account.tendermint_node_key]
+pk = "tpknam1qrvnxwgl8p025zpt6dyh6cmj88r2q5q42g08e0hjyn9pj6wwrdr6ut7kd92"
+authorization = "signam1qqe6gp9tc2nhanzz6j8jpyprv2xka78z909sndudy5uflk9pv63vdk53fxh4mg8gwfp4y0jy3xfz6qrzc5td09puxh3y7ktte8xwjhcts8re8c"
+
+[validator_account.eth_hot_key]
+pk = "tpknam1qyp4pu8rj5z7smfdmvw8cv8jn45cvaveezj7ng38cpgpc8840gw5g8g3qn7fx"
+authorization = "signam1q8lj70h7p9euphzpt7uwgt74jah804s79zcamqzw9ec9w3y3q9kuup4avl25wm3x5ln6t78acqvq22umqtlr365qqr5zu290fktxtvj3qqt4ueuv"
+
+[validator_account.eth_cold_key]
+pk = "tpknam1qyp7lgm550zngulaclnlyfv5jyehy7q6ew9z8k8gewtlv3zsap8r4yg82a65m"
+authorization = "signam1qxp793z3x8eykhyarv7hc7p5jhnar5fxxaaeex7x45a8qt8upse7cvvjza0w22t99t4h0k3eje5k8kp3u0s9t6evwn22wgd3glt3nf9lqqthxzm0"
+
+[validator_account.metadata]
+email = "validator-1@heliax.click"
+
+[validator_account.signatures]
+tpknam1qp5efx0w3sqkgngh5l4gt4hx9l07vha6vdn7twn9gd6khqvwqka9qgfpaw9 = "signam1qzf5hshq6ahs0wl0nn8fm09n8tyzecgwdhx9crnfcmjvdpkzamu73kuntx7x9ns30az647jrl8sd8jthzz8cp088um56x50fe6nlw3qz7dh5zu"
