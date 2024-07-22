@@ -54,7 +54,7 @@ jobs:
         if: steps.cached-poetry-dependencies.outputs.cache-hit != 'true'
       - run: |
           source .venv/bin/activate
-          poetry run python3 scripts/validate-pr.py
+          poetry run python scripts/validate-pr.py
 
   merge-check:
     runs-on: ubuntu-latest
@@ -86,7 +86,7 @@ jobs:
         if: steps.cached-poetry-dependencies.outputs.cache-hit != 'true'
       - run: |
           source .venv/bin/activate
-          poetry run python3 scripts/validate-pr.py
+          poetry run python scripts/validate-pr.py
 
   main:
     if: ${{ github.event_name == 'push' && github.ref == 'refs/heads/main' }}
@@ -117,7 +117,7 @@ jobs:
         if: steps.cached-poetry-dependencies.outputs.cache-hit != 'true'
       - run: |
           source .venv/bin/activate
-          poetry run python3 scripts/merge-pr.py
+          poetry run python scripts/merge-pr.py
 
   can_enqueue:
     needs: [pr-check]
