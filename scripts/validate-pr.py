@@ -162,6 +162,7 @@ def main():
         res = re.search(FILE_NAME_PATTER, file)
         if res is None:
             print("{} doesn't match pattern {}".format(file, FILE_NAME_PATTER))
+            exit(1)
 
         print("{} is allowed, checking if its valid...".format(file))
 
