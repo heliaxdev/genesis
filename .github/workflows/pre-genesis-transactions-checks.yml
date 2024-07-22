@@ -20,9 +20,9 @@ permissions:
   contents: write
 
 env:
-  CAN_ADD_VALIDATORS: ${{ env.CAN_ADD_VALIDATORS }}
-  CAN_ADD_BONDS: ${{ env.CAN_ADD_BONDS }}
-  CAN_ADD_ACCOUNTS: ${{ env.CAN_ADD_ACCOUNTS }}
+  CAN_ADD_VALIDATORS: ${{ vars.CAN_ADD_VALIDATORS }}
+  CAN_ADD_BONDS: ${{ vars.CAN_ADD_BONDS }}
+  CAN_ADD_ACCOUNTS: ${{ vars.CAN_ADD_ACCOUNTS }}
 
 jobs:
   pr-check:
