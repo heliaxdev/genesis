@@ -31,7 +31,7 @@ pk = "tpknam1qyp7lgm550zngulaclnlyfv5jyehy7q6ew9z8k8gewtlv3zsap8r4yg82a65m"
 authorization = "signam1qxp793z3x8eykhyarv7hc7p5jhnar5fxxaaeex7x45a8qt8upse7cvvjza0w22t99t4h0k3eje5k8kp3u0s9t6evwn22wgd3glt3nf9lqqthxzm0"
 
 [validator_account.metadata]
-email = "validator-1@heliax.click"
+email = "validator-1@eliax.click"
 
 [validator_account.signatures]
 tpknam1qp5efx0w3sqkgngh5l4gt4hx9l07vha6vdn7twn9gd6khqvwqka9qgfpaw9 = "signam1qzf5hshq6ahs0wl0nn8fm09n8tyzecgwdhx9crnfcmjvdpkzamu73kuntx7x9ns30az647jrl8sd8jthzz8cp088um56x50fe6nlw3qz7dh5zu"
