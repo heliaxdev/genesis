@@ -115,6 +115,8 @@ jobs:
       - name: Install dependencies
         run: poetry install --no-interaction
         if: steps.cached-poetry-dependencies.outputs.cache-hit != 'true'
+      - name: test
+        run: git diff --name-only main
       - run: |
           source .venv/bin/activate
           poetry run python scripts/merge-pr.py
