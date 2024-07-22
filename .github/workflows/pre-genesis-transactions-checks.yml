@@ -51,7 +51,7 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-python@v5
-      - run: python3 scripts/merge-pr.py
+      - run: python3 scripts/rebuild.py
 
   can_enqueue:
     needs: [pr-check]
