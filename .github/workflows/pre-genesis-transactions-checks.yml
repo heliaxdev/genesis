@@ -5,11 +5,11 @@ on:
   pull_request:
     branches:
       - main
+    paths:
+      - transactions/*.toml
   push:
     branches:
       - main
-    paths:
-      - transactions/*.toml
 
 concurrency:
   group: ${{ github.ref }}
@@ -85,7 +85,7 @@ jobs:
           poetry run python3 scripts/merge-pr.py
 
   main:
-    if: ${{ github.event_name == 'push' || 'refs/heads/main' }}
+    if: ${{ github.event_name == 'push' && github.ref == 'refs/heads/main' }}
     name: Rebuild graphs
     runs-on: ubuntu-latest
     steps:
