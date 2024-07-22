@@ -31,7 +31,8 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      
+      - uses: actions/setup-python@v5
+      - run: python3 scripts/validate-pr.py
 
   merge-check:
     runs-on: ubuntu-latest
@@ -40,18 +41,17 @@ jobs:
 
     steps:
       - uses: actions/checkout@v4
-      # - uses: stefanzweifel/git-auto-commit-action@v5
-      #   with:
-      #     commit_message: "Merged pre-genesis transaction."
-      #     add_options: '-u'
-  
+      - uses: actions/setup-python@v5
+      - run: python3 scripts/merge-pr.py
+
   main:
     if: ${{ github.ref == 'refs/heads/main' }}
     name: Rebuild graphs
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      
+      - uses: actions/setup-python@v5
+      - run: python3 scripts/merge-pr.py
 
   can_enqueue:
     needs: [pr-check]
