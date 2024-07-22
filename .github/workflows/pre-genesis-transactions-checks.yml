@@ -49,6 +49,8 @@ jobs:
         with:
           path: .venv
           key: venv-${{ runner.os }}-${{ steps.setup-python.outputs.python-version }}-${{ hashFiles('**/poetry.lock') }}
+      - name: Testing
+        run: git diff --name-only main
       - name: Install dependencies
         run: poetry install --no-interaction
         if: steps.cached-poetry-dependencies.outputs.cache-hit != 'true'
@@ -115,8 +117,6 @@ jobs:
       - name: Install dependencies
         run: poetry install --no-interaction
         if: steps.cached-poetry-dependencies.outputs.cache-hit != 'true'
-      - name: test
-        run: git diff --name-only main
       - run: |
           source .venv/bin/activate
           poetry run python scripts/merge-pr.py
