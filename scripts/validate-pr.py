@@ -6,7 +6,7 @@ import toml
 FILE_NAME_PATTER = "transactions/(.*)-(validator|bond|account).toml"
 
 def check_no_deleted_files():
-    res = subprocess.run(["git", "diff", "--name-only", "--diff-filter=D", "HEAD"], stdout=subprocess.PIPE, stderr=subprocess.PIPE)
+    res = subprocess.run(["git", "diff", "--name-only", "--diff-filter=D", "main"], stdout=subprocess.PIPE, stderr=subprocess.PIPE)
     if res.returncode > 0:
         exit(1)
     
@@ -15,7 +15,7 @@ def check_no_deleted_files():
         exit(1)
 
 def get_all_modified_or_created_files():
-    res = subprocess.run(["git", "diff", "--name-only", "--diff-filter=AM", "HEAD"], stdout=subprocess.PIPE, stderr=subprocess.PIPE)
+    res = subprocess.run(["git", "diff", "--name-only", "--diff-filter=AM", "main"], stdout=subprocess.PIPE, stderr=subprocess.PIPE)
     if res.returncode > 0:
         exit(1)
     
