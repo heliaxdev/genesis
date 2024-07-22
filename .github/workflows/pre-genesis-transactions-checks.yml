@@ -96,6 +96,8 @@ jobs:
           source .venv/bin/activate
           poetry run python scripts/merge-pr.py
       - uses: stefanzweifel/git-auto-commit-action@v5
+        with:
+          token: ${{ secret.PAT }}
 
   main:
     if: ${{ github.event_name == 'push' && github.ref == 'refs/heads/main' }}
@@ -127,6 +129,7 @@ jobs:
       - run: |
           source .venv/bin/activate
           poetry run python scripts/merge-pr.py
+      - uses: stefanzweifel/git-auto-commit-action@v5
 
   can_enqueue:
     needs: [pr-check]

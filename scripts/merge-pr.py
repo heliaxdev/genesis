@@ -1,31 +1,24 @@
-import subprocess
+import glob
 
-def get_all_created_files():
-    res = subprocess.run(["git", "diff", "--name-only", "--diff-filter=A", "origin/main"], stdout=subprocess.PIPE, stderr=subprocess.PIPE)
-    if res.returncode > 0:
-        exit(1)
-    
-    return list(map(lambda file_path: file_path.decode(), res.stdout.splitlines()))
+def get_all_merged_transactions():
+    return glob.glob("transactions/*-*.toml")
 
-def get_alias(changes_files):
-    alias = changes_files[0].split('/')[1].split('-')[0]
-    for file in changes_files:
-        if not alias == file.split('/')[1].split('-')[0]:
-            return None
-    
-    return alias
+def get_alias(file):
+    return "{}".format(file.split('/')[1].split('.')[0])
 
 def main():
-    changed_files = get_all_created_files()
-    alias = get_alias(changed_files)
-    genesis_transactions = open("genesis/transactions.toml", "a")
+    transactions = get_all_merged_transactions()
+    genesis_transactions = open("genesis/transactions.toml", "w")
 
-    print("Will add {} transactions for alias {}...".format(len(changed_files), alias))
+    print("Adding {} transactions...".format(len(transactions)))
 
-    genesis_transactions.write("\n\n# adding transactions for {}\n\n".format(alias))
-
-    for file in changed_files:
+    for index, file in enumerate(transactions):
         print("Adding {}...".format(file))
+        alias = get_alias(file)
+        if index == 0:
+            genesis_transactions.write("# adding transaction for {}\n\n".format(alias))
+        else:
+            genesis_transactions.write("\n\n# adding transaction for {}\n\n".format(alias))
         new_transaction = open(file, "r")
         genesis_transactions.write("{}\n".format(new_transaction.read()))
 
