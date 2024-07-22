@@ -6,7 +6,7 @@ import toml
 FILE_NAME_PATTER = "transactions/(.*)-(validator|bond|account).toml"
 
 def check_no_deleted_files():
-    res = subprocess.run(["git", "diff", "--name-only", "--diff-filter=D", "main"], stdout=subprocess.PIPE, stderr=subprocess.PIPE)
+    res = subprocess.run(["git", "diff", "--name-only", "--diff-filter=D", "maing"], stdout=subprocess.PIPE, stderr=subprocess.PIPE)
     if res.returncode > 0:
         exit(1)
     
@@ -15,7 +15,7 @@ def check_no_deleted_files():
         exit(1)
 
 def get_all_modified_or_created_files():
-    res = subprocess.run(["git", "diff", "--name-only", "--diff-filter=AM", "main"], stdout=subprocess.PIPE, stderr=subprocess.PIPE)
+    res = subprocess.run(["git", "diff", "--name-only", "--diff-filter=AM", "maing"], stdout=subprocess.PIPE, stderr=subprocess.PIPE)
     if res.returncode > 0:
         exit(1)
     
@@ -47,16 +47,12 @@ def check_if_account_is_valid(accounts_toml: List[Dict], balances_toml: Dict[str
 
         # TODO: check for bech32m public keys
 
-        print("Account is valid.")
-
-
 def check_if_validator_is_valid(validators_toml: List[Dict], balances_toml: Dict[str, Dict]):
     check_if_account_is_valid(validators_toml, balances_toml)
-    print("Validator is valid.")
 
 
 def check_if_bond_is_valid(validators_toml: List[Dict], balances_toml: Dict[str, Dict]):
-    print("Bond is valid.")
+    return True
 
 
 def validate_toml(file):
@@ -72,6 +68,8 @@ def validate_toml(file):
     elif '-bond.toml':
         bonds_toml = read_unsafe_toml(file)
         check_if_bond_is_valid(bonds_toml, balances)
+
+    print("{} is valid.".format(file))
 
 def main():
     check_no_deleted_files()
