@@ -26,7 +26,7 @@ env:
 
 jobs:
   pr-check:
-    if: ${{ github.event_name == 'pull_request' || github.event_name == 'merge_group' }}
+    if: ${{ github.event_name == 'pull_request_target' || github.event_name == 'merge_group' }}
     name: Shallow PR check
     runs-on: ubuntu-latest
     steps:
@@ -37,7 +37,7 @@ jobs:
   merge-check:
     runs-on: ubuntu-latest
     name: Deep merge check 
-    if: ${{ github.event_name == 'pull_request' || github.event_name == 'merge_group' }}
+    if: ${{ github.event_name == 'pull_request_target' || github.event_name == 'merge_group' }}
 
     steps:
       - uses: actions/checkout@v4
@@ -55,6 +55,7 @@ jobs:
 
   can_enqueue:
     needs: [pr-check]
+    name: Can try to merge
     if: always() && github.event_name != 'merge_group'
     permissions:
       actions: read
@@ -70,6 +71,7 @@ jobs:
 
   can_merge:
     needs: [pr-check, merge-check]
+    name: Can merge
     if: always() && github.event_name == 'merge_group'
     permissions:
       contents: read
