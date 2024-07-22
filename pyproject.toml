@@ -1,0 +1,16 @@
+[tool.poetry]
+name = "genesis"
+version = "0.1.0"
+description = ""
+authors = ["Gianmarco Fraccaroli <gianmarco.fraccaroli@gmail.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.12"
+
+[tool.poetry.group.dev.dependencies]
+toml = "^0.10.2"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"

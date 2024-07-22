@@ -2,11 +2,8 @@ import subprocess
 import re
 from typing import Dict, List
 import toml
-from bech32m import decode
-import bech32m
 
 FILE_NAME_PATTER = "transactions/(.*)-(validator|bond|account).toml"
-PUBLIC_KEY_BECH32_TAG = "tkpnam"
 
 def check_no_deleted_files():
     res = subprocess.run(["git", "diff", "--name-only", "--diff-filter=D", "HEAD"], stdout=subprocess.PIPE, stderr=subprocess.PIPE)
