@@ -23,6 +23,15 @@ def get_all_created_files():
     return list(map(lambda file_path: file_path.decode(), res.stdout.splitlines()))
 
 
+def get_alias(changed_files):
+    alias = changed_files[0].split('/')[1].split('-')[0]
+    for file in changed_files:
+        if not alias == file.split('/')[1].split('-')[0]:
+            return None
+    
+    return alias
+
+
 def read_unsafe_toml(file_path):
     try:
         return toml.load(open(file_path, "r"))
@@ -152,8 +161,9 @@ def validate_toml(file):
     print("{} is valid.".format(file))
 
 def main():
-    # check_no_deleted_or_modified_files()
+    check_no_deleted_or_modified_files()
     changed_files = get_all_created_files()
+    alias = get_alias(changed_files)
 
     print("Found {} file changed/added.".format(len(changed_files)))
     
@@ -170,7 +180,6 @@ def main():
             continue
 
         validate_toml(file)
-
 
 
 if __name__ == "__main__":
