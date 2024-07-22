@@ -1,5 +1,5 @@
 [tool.poetry]
-name = "genesis"
+name = "scripts"
 version = "0.1.0"
 description = ""
 authors = ["Gianmarco Fraccaroli <gianmarco.fraccaroli@gmail.com>"]

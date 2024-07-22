@@ -122,7 +122,7 @@ jobs:
   can_enqueue:
     needs: [pr-check]
     name: Can try to merge
-    if: always() && github.event_name != 'merge_group'
+    if: always() && github.event_name != 'merge_group' && github.event_name != 'push'
     permissions:
       actions: read
     runs-on: ubuntu-latest
