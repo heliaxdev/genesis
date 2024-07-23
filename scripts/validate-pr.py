@@ -174,7 +174,7 @@ def main():
             exit(1)
 
         file_alias = file.split('/')[1].split('.')[0]
-        if not alias in file_alias:
+        if not alias.lower() in file_alias.lower():
             exit(1)
 
         print("{} is allowed, checking if its valid...".format(file))
