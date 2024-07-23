@@ -1,5 +1,6 @@
 import subprocess
 import re
+import os
 from typing import Dict, List
 import toml
 
@@ -29,6 +30,13 @@ def read_unsafe_toml(file_path):
     except Exception as e:
         return None
     
+
+def get_alias():
+    alias = os.environ.get("ALIAS")
+    if alias is None:
+        exit(1)
+    return alias
+
 
 def check_if_account_is_valid(accounts_toml: List[Dict]):
     for account in accounts_toml['established_account']:
@@ -154,6 +162,7 @@ def validate_toml(file):
 def main():
     check_no_deleted_or_modified_files()
     changed_files = get_all_created_files()
+    alias = get_alias()
 
     print("Found {} file changed/added.".format(len(changed_files)))
     
@@ -162,6 +171,10 @@ def main():
         res = re.search(FILE_NAME_PATTER, file)
         if res is None:
             print("{} doesn't match pattern {}".format(file, FILE_NAME_PATTER))
+            exit(1)
+
+        file_alias = file.split('/')[1].split('.')[0]
+        if not alias in file_alias:
             exit(1)
 
         print("{} is allowed, checking if its valid...".format(file))

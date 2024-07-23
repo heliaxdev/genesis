@@ -1,6 +1,7 @@
 from collections import defaultdict
 import glob
 import toml
+import os
 import plotly.graph_objects as go
 from jinja2 import Environment, FileSystemLoader
 
@@ -34,6 +35,13 @@ def read_unsafe_toml(file_path):
         return toml.load(open(file_path, "r"))
     except Exception as e:
         return None
+
+
+def get_alias():
+    alias = os.environ.get("ALIAS")
+    if alias is None:
+        exit(1)
+    return alias
 
 
 def parse_validators():
@@ -74,10 +82,31 @@ def parse_validators():
 
     return sorted(validators, key=lambda d: d['voting_power'])
 
+
+def merge_transactions(alias):
+    transactions = glob.glob("transactions/*-*.toml")
+    genesis_transactions = open("genesis/transactions.toml", "w")
+
+    print("Adding {} transactions...".format(len(transactions)))
+
+    for index, file in enumerate(transactions):
+        print("Adding {}...".format(file))
+        if index == 0:
+            genesis_transactions.write("# adding transaction for {}\n\n".format(alias))
+        else:
+            genesis_transactions.write("\n\n# adding transaction for {}\n\n".format(alias))
+        new_transaction = open(file, "r")
+        genesis_transactions.write("{}\n".format(new_transaction.read()))
+
+    print("Done.")
+
+
 def main():
     validators = parse_validators()
+    alias = get_alias()
     build_graph(validators)
     build_readme(validators)
+    merge_transactions(alias)
 
 if __name__ == "__main__":
     main()

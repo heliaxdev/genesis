@@ -1,10 +1,14 @@
 import glob
+import os
 
 def get_all_merged_transactions():
     return glob.glob("transactions/*-*.toml")
 
-def get_alias(file):
-    return "{}".format(file.split('/')[1].split('.')[0])
+def get_alias():
+    alias = os.environ.get("ALIAS")
+    if alias is None:
+        exit(1)
+    return alias
 
 def main():
     transactions = get_all_merged_transactions()
