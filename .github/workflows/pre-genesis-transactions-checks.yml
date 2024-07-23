@@ -102,7 +102,7 @@ jobs:
 
   main:
     if: ${{ github.event_name == 'push' && github.ref == 'refs/heads/main' }}
-    name: Rebuild graphs
+    name: Rebuild genesis README
     runs-on: ubuntu-latest
     steps:
       - uses: actions/create-github-app-token@v1
@@ -141,6 +141,8 @@ jobs:
         env:
           ALIAS: ${{ github.actor }}
       - uses: stefanzweifel/git-auto-commit-action@v5
+        with:
+          commit_message: "[skip ci] rebuild genesis readme"
 
   can_enqueue:
     needs: [pr-check]
