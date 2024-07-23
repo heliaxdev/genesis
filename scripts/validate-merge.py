@@ -18,7 +18,7 @@ def main():
 
     for index, file in enumerate(transactions):
         print("Adding {}...".format(file))
-        alias = get_alias(file)
+        alias = get_alias()
         if index == 0:
             genesis_transactions.write("# adding transaction for {}\n\n".format(alias))
         else:
