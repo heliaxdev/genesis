@@ -106,7 +106,7 @@ def main():
     validators = parse_validators()
     build_graph(validators)
     build_readme(validators)
-    merge_transactions(alias)
+    merge_transactions()
 
 if __name__ == "__main__":
     main()
