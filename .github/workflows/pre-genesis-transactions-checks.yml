@@ -94,7 +94,7 @@ jobs:
         if: steps.cached-poetry-dependencies.outputs.cache-hit != 'true'
       - run: |
           source .venv/bin/activate
-          poetry run python scripts/validate-pr.py
+          poetry run python scripts/validate-merge.py
 
   main:
     if: ${{ github.event_name == 'push' && github.ref == 'refs/heads/main' }}
@@ -133,7 +133,7 @@ jobs:
         if: steps.cached-poetry-dependencies.outputs.cache-hit != 'true'
       - run: |
           source .venv/bin/activate
-          poetry run python scripts/merge-pr.py
+          poetry run python scripts/rebuild.py
       - uses: stefanzweifel/git-auto-commit-action@v5
 
   can_enqueue:
