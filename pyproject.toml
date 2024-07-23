@@ -7,6 +7,9 @@ readme = "README.md"
 
 [tool.poetry.dependencies]
 python = "^3.12"
+plotly = "^5.22.0"
+kaleido = "0.2.1"
+jinja2 = "^3.1.4"
 
 [tool.poetry.group.dev.dependencies]
 toml = "^0.10.2"

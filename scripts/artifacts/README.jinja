@@ -1,0 +1,19 @@
+# Namada Mainnet Genesis files
+
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla mauris magna, blandit non posuere a, tempor vel nibh. Integer lacinia quam tempor hendrerit porta. Ut quis congue elit.
+
+## Voting power distrubiton
+
+![Voting Power Distribution](../images/validators.png "Voting Power Distribution")
+
+## Validators
+
+{% for validator in validators %}
+- address: `{{ validator.address }}`
+    - alias: `{{ validator.alias or 'Unknown alias' }}`
+    - commission: `{{ validator.commission_rate }}%`
+    - max commission rate change: `{{ validator.max_commission_rate_change }}%`
+    - total voting power: `{{ validator.voting_power }}`
+    - email: `{{ validator.email }}`
+    - website: `{{ validator.website or 'Unknown website' }}`
+{% endfor %}
