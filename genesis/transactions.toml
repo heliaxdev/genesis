@@ -1,5 +1,24 @@
 # adding transaction for namadagenesisbot[bot]
 
+[[bond]]
+source = "tnam1q8nzq9m5v8upn6jkjsljf25mzf2n9u7qfyc8kwje"
+validator = "tnam1q8nzq9m5v8upn6jkjsljf25mzf2n9u7qfyc8kwje"
+amount = "10000"
+
+[bond.signatures]
+tpknam1qp5efx0w3sqkgngh5l4gt4hx9l07vha6vdn7twn9gd6khqvwqka9qgfpaw9 = "signam1qpqyphv26jzapec385xgemcnh0wtsjh7rtw3ypeqcm58rzd0hpe7qqlfszcpd6spndnzun49dm3aguzynf5scwl7ksalntk8kxm37dcdlaq0ay"
+
+
+# adding transaction for namadagenesisbot[bot]
+
+[[established_account]]
+vp = "vp_user"
+threshold = 1
+public_keys = ["tpknam1qp5efx0w3sqkgngh5l4gt4hx9l07vha6vdn7twn9gd6khqvwqka9qgfpaw9"]
+
+
+# adding transaction for namadagenesisbot[bot]
+
 [[established_account]]
 vp = "vp_user"
 threshold = 1
@@ -37,22 +56,3 @@ email = "validator-1@eliax.click"
 
 [validator_account.signatures]
 tpknam1qp5efx0w3sqkgngh5l4gt4hx9l07vha6vdn7twn9gd6khqvwqka9qgfpaw9 = "signam1qzf5hshq6ahs0wl0nn8fm09n8tyzecgwdhx9crnfcmjvdpkzamu73kuntx7x9ns30az647jrl8sd8jthzz8cp088um56x50fe6nlw3qz7dh5zu"
-
-
-# adding transaction for namadagenesisbot[bot]
-
-[[bond]]
-source = "tnam1q8nzq9m5v8upn6jkjsljf25mzf2n9u7qfyc8kwje"
-validator = "tnam1q8nzq9m5v8upn6jkjsljf25mzf2n9u7qfyc8kwje"
-amount = "10000"
-
-[bond.signatures]
-tpknam1qp5efx0w3sqkgngh5l4gt4hx9l07vha6vdn7twn9gd6khqvwqka9qgfpaw9 = "signam1qpqyphv26jzapec385xgemcnh0wtsjh7rtw3ypeqcm58rzd0hpe7qqlfszcpd6spndnzun49dm3aguzynf5scwl7ksalntk8kxm37dcdlaq0ay"
-
-
-# adding transaction for namadagenesisbot[bot]
-
-[[established_account]]
-vp = "vp_user"
-threshold = 1
-public_keys = ["tpknam1qp5efx0w3sqkgngh5l4gt4hx9l07vha6vdn7twn9gd6khqvwqka9qgfpaw9"]
