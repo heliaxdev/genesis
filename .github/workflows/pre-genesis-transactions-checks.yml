@@ -97,8 +97,6 @@ jobs:
       - run: |
           source .venv/bin/activate
           poetry run python scripts/validate-merge.py
-        env:
-          ALIAS: ${{ github.actor }}
 
   main:
     if: ${{ github.event_name == 'push' && github.ref == 'refs/heads/main' }}
@@ -138,8 +136,6 @@ jobs:
       - run: |
           source .venv/bin/activate
           poetry run python scripts/rebuild.py
-        env:
-          ALIAS: ${{ github.actor }}
       - uses: stefanzweifel/git-auto-commit-action@v5
         with:
           commit_message: "[skip ci] rebuild genesis readme"

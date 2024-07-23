@@ -83,7 +83,7 @@ def parse_validators():
     return sorted(validators, key=lambda d: d['voting_power'])
 
 
-def merge_transactions(alias):
+def merge_transactions():
     transactions = glob.glob("transactions/*-*.toml")
     genesis_transactions = open("genesis/transactions.toml", "w")
 
@@ -91,6 +91,7 @@ def merge_transactions(alias):
 
     for index, file in enumerate(transactions):
         print("Adding {}...".format(file))
+        alias = file.split("/")[1].split(".")[0].lower()
         if index == 0:
             genesis_transactions.write("# adding transaction for {}\n\n".format(alias))
         else:
@@ -103,7 +104,6 @@ def merge_transactions(alias):
 
 def main():
     validators = parse_validators()
-    alias = get_alias()
     build_graph(validators)
     build_readme(validators)
     merge_transactions(alias)
