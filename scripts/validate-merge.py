@@ -7,8 +7,8 @@ def get_all_merged_transactions():
 
 
 def is_valid_template():
-    namada_binaries_path = os.environ.get("NAMADA_PATH", 'namada')
-    res = subprocess.run([namada_binaries_path, "client", "utils", "validate-genesis-templates", "--path", "genesis"], stdout=subprocess.PIPE, stderr=subprocess.PIPE, shell=True)
+    namadac_binaries_path = os.environ.get("NAMADAC_PATH", 'namadac')
+    res = subprocess.run([namadac_binaries_path, "utils", "validate-genesis-templates", "--path", "genesis"], stdout=subprocess.PIPE, stderr=subprocess.PIPE, shell=True)
     if res.returncode > 0:
         print(res.stderr)
         print("---------")
