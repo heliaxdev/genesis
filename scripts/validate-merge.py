@@ -19,6 +19,7 @@ def is_valid_template():
     res = subprocess.run([namada_binaries_path, "client", "utils", "validate-genesis-templates", "--path", "genesis"], stdout=subprocess.PIPE, stderr=subprocess.PIPE)
     if res.returncode > 0:
         print(res.stderr)
+        print("---------")
         print(res.stdout)
         exit(1)
 
