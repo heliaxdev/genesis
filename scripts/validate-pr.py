@@ -10,9 +10,9 @@ EMAIL_PATTERN = r"^\S+@\S+\.\S+$"
 
 
 def read_env():
-    can_apply_for_validators = os.environ.get('CAN_ADD_VALIDATORS')
-    can_apply_for_bonds = os.environ.get('CAN_ADD_BONDS')
-    can_apply_for_accounts = os.environ.get('CAN_ADD_ACCOUNTS')
+    can_apply_for_validators = os.environ.get('CAN_ADD_VALIDATORS', True)
+    can_apply_for_bonds = os.environ.get('CAN_ADD_BONDS', True)
+    can_apply_for_accounts = os.environ.get('CAN_ADD_ACCOUNTS', True)
 
     return can_apply_for_validators, can_apply_for_bonds, can_apply_for_accounts
 
