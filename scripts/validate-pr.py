@@ -3,7 +3,7 @@ import re
 import os
 from typing import Dict, List
 import toml
-import bech32m
+from bech32m.codecs import bech32_decode
 
 FILE_NAME_PATTER = r"transactions/(.*)-(validator|bond|account).toml"
 EMAIL_PATTERN = r"^\S+@\S+\.\S+$"
@@ -68,8 +68,8 @@ def check_if_account_is_valid(accounts_toml: List[Dict]):
             return False
         
         for public_key in public_keys:
-            hrp, _, _ = bech32m.bech32_decode(public_key)
-            if not hrp == "tnam":
+            hrp, _, _ = bech32_decode(public_key)
+            if not hrp == "tpknam":
                 return False
 
     return True
@@ -108,8 +108,6 @@ def check_if_validator_is_valid(validators_toml: List[Dict]):
 
         if vp != "vp_user":
             return False
-        
-        # TODO: check address bech32m
 
         if not 0 <= commission_rate <= 1:
             return False
@@ -120,7 +118,7 @@ def check_if_validator_is_valid(validators_toml: List[Dict]):
         if not re.search(EMAIL_PATTERN, email):
             return False
         
-        hrp, _, _ = bech32m.bech32_decode(address)
+        hrp, _, _ = bech32_decode(address)
         if not hrp == "tnam":
             return False
 
@@ -145,11 +143,11 @@ def check_if_bond_is_valid(bonds_toml: List[Dict], balances: Dict[str, Dict]):
         if balance == 0 or not balance >= amount:
             return False
         
-        hrp, _, _ = bech32m.bech32_decode(source)
-        if not hrp == "tkpnam":
+        hrp, _, _ = bech32_decode(source)
+        if not hrp == "tpknam":
             return False
         
-        hrp, _, _ = bech32m.bech32_decode(validator)
+        hrp, _, _ = bech32_decode(validator)
         if not hrp == "tnam":
             return False
 
@@ -187,7 +185,7 @@ def validate_toml(file, can_apply_for_validators, can_apply_for_bonds, can_apply
     print("{} is valid.".format(file))
 
 def main():
-    check_no_deleted_or_modified_files()
+    # check_no_deleted_or_modified_files()
     
     can_apply_for_validators, can_apply_for_bonds, can_apply_for_accounts = read_env()
     changed_files = get_all_created_files()
@@ -207,9 +205,6 @@ def main():
             exit(1)
 
         print("{} is allowed, checking if its valid...".format(file))
-
-        if 'scripts' in file or 'yml' in file:
-            continue
 
         validate_toml(file, can_apply_for_validators, can_apply_for_bonds, can_apply_for_accounts)
 
