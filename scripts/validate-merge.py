@@ -1,17 +1,9 @@
 import glob
 import os
 import subprocess
-import toml
 
 def get_all_merged_transactions():
     return glob.glob("transactions/*-*.toml")
-
-
-def get_alias():
-    alias = os.environ.get("ALIAS")
-    if alias is None:
-        exit(1)
-    return alias
 
 
 def is_valid_template():

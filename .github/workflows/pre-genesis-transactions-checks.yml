@@ -23,6 +23,7 @@ env:
   CAN_ADD_VALIDATORS: ${{ vars.CAN_ADD_VALIDATORS }}
   CAN_ADD_BONDS: ${{ vars.CAN_ADD_BONDS }}
   CAN_ADD_ACCOUNTS: ${{ vars.CAN_ADD_ACCOUNTS }}
+  RUST_BACKTRACE: 1 
 
 jobs:
   pr-check:
