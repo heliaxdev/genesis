@@ -7,7 +7,7 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla mauris magna, bla
 ![Voting Power Distribution](../images/validators.png "Voting Power Distribution")
 
 ## Validators
-
+{% if validators|length > 0 %}
 {% for validator in validators %}
 - address: `{{ validator.address }}`
     - alias: `{{ validator.alias or 'Unknown alias' }}`
@@ -17,3 +17,6 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla mauris magna, bla
     - email: `{{ validator.email }}`
     - website: `{{ validator.website or 'Unknown website' }}`
 {% endfor %}
+{% else %}
+There are no validators.
+{% endif %}
