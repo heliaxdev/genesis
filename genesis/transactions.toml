@@ -1,0 +1,40 @@
+# adding transaction for fraccaman-validator
+
+[[established_account]]
+vp = "vp_user"
+threshold = 1
+public_keys = ["tpknam1qqu944gyy0unek5vpawft46rz0aj7u4zjv5lged60pn6gg8azdg5kvusuz8"]
+
+[[validator_account]]
+address = "tnam1q88t9npa8vq6wczlw0rmpzsswyjsu4q2nshhucjd"
+vp = "vp_user"
+commission_rate = "0.05"
+max_commission_rate_change = "0.01"
+net_address = "1.2.3.4:1010"
+
+[validator_account.consensus_key]
+pk = "tpknam1qq7p2n2khns4pvfqhmqplaf56y79ptsma55jgy469atturmfhqr8k5nj50r"
+authorization = "signam1qqcx5tp65rjqgq6f6yc4k6tcedfkw5ggv7dnn3qvcsznm3fznwefmd3md4dpqwe3edtks3k5zmv2slsc96kr9guaxl29hvf8zv9p25gfmhsagx"
+
+[validator_account.protocol_key]
+pk = "tpknam1qzqy4fa74st4jw9tqm0k6yurts8y20clzscf8weuaw0a0a34ftmfvlnuvgl"
+authorization = "signam1qp5dad0emce8evmpyrcu4y2vxsfdlhz8d7hgu3tt5jmj0z642gwtqhxjah6ge7d80936770tngk2fgv9t6fu79p8kqsa0g6r74agyfg9eznepv"
+
+[validator_account.tendermint_node_key]
+pk = "tpknam1qr7ldqns3p805fcf2emqcha3u86zkft5tm57atdgn8574ywtc7vqss99vxn"
+authorization = "signam1qrw9un2yvm2kfyq23nyngagc7wxzyghv7xgppw453qdpnfqe8f4p3ahsm852kyc98fj8wvhw5fczpshz0wteneakn52vud7qp2frt6grrtmjge"
+
+[validator_account.eth_hot_key]
+pk = "tpknam1qyp9yeyc57ancpvdv68j3rmkad4qmf5ju9fyq0c378mxssqgfj9f0mg7svjpn"
+authorization = "signam1qxp86d7w2aruyuz3pe444peflvyf7r9nd6r9c3e4hlpwz8q38xchwmse3zdf6ldenv5eqrrxr8f83tepffmhfa9y2c4nj3lj7sjmeaz6qq35vrkt"
+
+[validator_account.eth_cold_key]
+pk = "tpknam1qypncf497l7v9tpp82x4l6498ke26xntwzw966slkyq87l2mqadxgdc34c30r"
+authorization = "signam1q9u93auw553zuv8smfv2pfhcrtje72yk9je8tmelegnpwkfp0xpp5kx72mjvsgvh96t5lys36y3hlrvt7zul43pewcj6qz5l5gspnj6gqy2s2w8r"
+
+[validator_account.metadata]
+email = "test@test.com"
+avatar = "url"
+
+[validator_account.signatures]
+tpknam1qqu944gyy0unek5vpawft46rz0aj7u4zjv5lged60pn6gg8azdg5kvusuz8 = "signam1qzaw0px50sgj0ncrdanawjuny4yudkchqqswmznca66am9fapdwsccdvdec4l6jfsv4ewpaj0calg7teldsv3yvvjpusa4ze5kcjlms8v8js80"
