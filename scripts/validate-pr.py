@@ -3,7 +3,7 @@ import re
 import os
 from typing import Dict, List
 import toml
-from bech32m.codecs import bech32_decode
+from utils import is_valid_bech32m
 
 FILE_NAME_PATTER = r"transactions/(.*)-(validator|bond|account).toml"
 EMAIL_PATTERN = r"^\S+@\S+\.\S+$"
@@ -68,8 +68,8 @@ def check_if_account_is_valid(accounts_toml: List[Dict]):
             return False
         
         for public_key in public_keys:
-            hrp, _, _ = bech32_decode(public_key)
-            if not hrp == "tpknam":
+            is_valid = is_valid_bech32m(public_key, 'tpknam')
+            if not is_valid:
                 return False
 
     return True
@@ -92,6 +92,13 @@ def check_if_validator_is_valid(validators_toml: List[Dict]):
                 if sub_field not in validator[field]:
                     return False
                 
+                value = validator[field][sub_field]
+                if sub_field == 'pk' and not is_valid_bech32m(value, 'tpknam'):
+                    return False
+                elif sub_field == 'authorization' and not is_valid_bech32m(value, 'signam'):
+                    return False
+
+                
         for field in ['metadata']:
             for sub_field in ['email']:
                 if sub_field not in validator[field]:
@@ -99,6 +106,14 @@ def check_if_validator_is_valid(validators_toml: List[Dict]):
                 
         if len(validator['signatures']) <= 0:
             return False
+        
+        for public_key in validator['signatures'].keys():
+            if not is_valid_bech32m(public_key, 'tpknam'):
+                return False
+
+            sig = validator['signatures'][public_key]
+            if not is_valid_bech32m(sig, 'signam'):
+                return False
     
         vp = validator['vp']
         commission_rate = float(validator['commission_rate'])
@@ -118,8 +133,8 @@ def check_if_validator_is_valid(validators_toml: List[Dict]):
         if not re.search(EMAIL_PATTERN, email):
             return False
         
-        hrp, _, _ = bech32_decode(address)
-        if not hrp == "tnam":
+        is_valid = is_valid_bech32m(address, 'tnam')
+        if not is_valid:
             return False
 
     return True
@@ -134,6 +149,14 @@ def check_if_bond_is_valid(bonds_toml: List[Dict], balances: Dict[str, Dict]):
         if len(bond['signatures']) <= 0:
             return False
         
+        for public_key in validator['signatures'].keys():
+            if not is_valid_bech32m(public_key, 'tpknam'):
+                return False
+
+            sig = validator['signatures'][public_key]
+            if not is_valid_bech32m(sig, 'signam'):
+                return False
+        
         source = bond['source']
         validator = bond['validator']
         amount = float(bond['amount'])
@@ -143,12 +166,12 @@ def check_if_bond_is_valid(bonds_toml: List[Dict], balances: Dict[str, Dict]):
         if balance == 0 or not balance >= amount:
             return False
         
-        hrp, _, _ = bech32_decode(source)
-        if not hrp == "tpknam":
+        is_valid = is_valid_bech32m(source, 'tpknam')
+        if not is_valid:
             return False
         
-        hrp, _, _ = bech32_decode(validator)
-        if not hrp == "tnam":
+        is_valid = is_valid_bech32m(validator, 'tnam')
+        if not is_valid:
             return False
 
     return True
