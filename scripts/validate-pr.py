@@ -3,6 +3,7 @@ import re
 import os
 from typing import Dict, List
 import toml
+import bech32m
 
 FILE_NAME_PATTER = r"transactions/(.*)-(validator|bond|account).toml"
 EMAIL_PATTERN = r"^\S+@\S+\.\S+$"
@@ -56,8 +57,12 @@ def check_if_account_is_valid(accounts_toml: List[Dict]):
 
         if threshold <= 0:
             return False
+        
+        for public_key in public_keys:
+            hrp, _, _ = bech32m.bech32_decode(public_key)
+            if not hrp == "tnam":
+                return False
 
-        # TODO: check for bech32m public keys
     return True
 
 def check_if_validator_is_valid(validators_toml: List[Dict]):
@@ -102,6 +107,10 @@ def check_if_validator_is_valid(validators_toml: List[Dict]):
         
         if not re.search(EMAIL_PATTERN, email):
             return False
+        
+        hrp, _, _ = bech32m.bech32_decode(address)
+        if not hrp == "tnam":
+            return False
 
     return True
 
@@ -124,7 +133,13 @@ def check_if_bond_is_valid(bonds_toml: List[Dict], balances: Dict[str, Dict]):
         if balance == 0 or not balance >= amount:
             return False
         
-        # TODO: check source and validator bech32
+        hrp, _, _ = bech32m.bech32_decode(source)
+        if not hrp == "tkpnam":
+            return False
+        
+        hrp, _, _ = bech32m.bech32_decode(validator)
+        if not hrp == "tnam":
+            return False
 
     return True
 

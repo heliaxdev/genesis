@@ -1,6 +1,7 @@
 import glob
 import os
 import subprocess
+import toml
 
 def get_all_merged_transactions():
     return glob.glob("transactions/*-*.toml")
