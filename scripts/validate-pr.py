@@ -149,11 +149,11 @@ def check_if_bond_is_valid(bonds_toml: List[Dict], balances: Dict[str, Dict]):
         if len(bond['signatures']) <= 0:
             return False
         
-        for public_key in validator['signatures'].keys():
+        for public_key in bond['signatures'].keys():
             if not is_valid_bech32m(public_key, 'tpknam'):
                 return False
 
-            sig = validator['signatures'][public_key]
+            sig = bond['signatures'][public_key]
             if not is_valid_bech32m(sig, 'signam'):
                 return False
         
