@@ -25,8 +25,7 @@ def check_deleted_and_modified_files(alias):
     files = list(map(lambda file_path: file_path.decode(), res.stdout.splitlines()))
     for file in files:
         file_alias = file.split('/')[1].split('.')[0]
-        if alias.lower() != file_alias.lower():
-            print(alias, file_alias)
+        if alias.lower() != file_alias:
             exit(1)
 
 def get_all_created_files():
