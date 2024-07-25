@@ -1,0 +1,42 @@
+[[established_account]]
+vp = "vp_user"
+threshold = 1
+public_keys = ["tpknam1qqephjg5pgnyn4p9ean2uaw7z9fhquefctj2z9r8psx0npt902c4sqqnptu"]
+
+[[validator_account]]
+address = "tnam1q8h9akjgy7s8zj7elj08d8lzrqr3w0cc9gplkaq2"
+vp = "vp_user"
+commission_rate = "0.05"
+max_commission_rate_change = "0.01"
+net_address = "65.109.25.222:12656"
+
+[validator_account.consensus_key]
+pk = "tpknam1qrrkuvaxuqytgnyaeux8gwu226h64hyh64fzfeq7uv0lults3qn0c9zq4ke"
+authorization = "signam1qzz07thgk4lj8x2emc37dcj9gd6j86l9hyqkehr0pu29swg75u5u88gr9p3ns6k0x35x4d6uaj7srnmwce306sv2j93myvnzq6we65cxu226h9"
+
+[validator_account.protocol_key]
+pk = "tpknam1qzf0gzwgkktyymrdjy7tysmage6r49u7zqckavng89tmfn098ycyysqa37n"
+authorization = "signam1qrumh40m5v6vaj0fja3e8d55kv9pyc37624p9d6sw8q9ltq0qqpy5y0zsle8ddg7qp5jke62n82rcvu9c0xkzfn3qketwrxpfdperksgl8ecrp"
+
+[validator_account.tendermint_node_key]
+pk = "tpknam1qrm6z2knxf5hwgzud7zh72kcre8ge0m06amkkfk74ertlgwnw3j5cfs82gn"
+authorization = "signam1qqs3a0w32aez4c46ja0ynts29j7dc30naya7jshn836fdm7y9usahkw7hfsy8awzs7ulz0hhmmzzlq254rw56z3369zwyusguwe3ryswspwpt7"
+
+[validator_account.eth_hot_key]
+pk = "tpknam1qyptns0dyzzesa9tuxqe7u065l4hmd3fpgq5c33p9tsy6uczflrc4hs7zhqx0"
+authorization = "signam1qyc323gvtz2jcm4z95h4ul5zaj5zlgllh0u8npg9gengemfs9zwnylerfeqnx4fgqnaxr3trydgk7t77fadu698nns534zkvul78maj0qy0cs0ye"
+
+[validator_account.eth_cold_key]
+pk = "tpknam1qyp9sl6k3za9hsyfm6rn48uzxac766d8cyxkxgxmqvus02s843tcfeq0vh0rs"
+authorization = "signam1qx2uvf4xe7x39a3qz8c8pwpsgyekacptf0czupyjmhhlsspcvlq8gckve2rsaa95usp0zwrkn43kvw7rt7tw03z50vqjmw5ttqrpkzdhqqgr6tq3"
+
+[validator_account.metadata]
+email = "hi@originstake.com"
+description = "OriginStake is a trusted Proof-of-Stake infrastructure provider and validator to comfortably stake your coins and earn rewards with Namada."
+website = "https://originstake.com"
+discord_handle = "mrspir"
+avatar = "https://raw.githubusercontent.com/OriginStake/ogs-media/main/Logo/PNG/OriginStake_Logo_1.png"
+name = "OriginStake"
+
+[validator_account.signatures]
+tpknam1qqephjg5pgnyn4p9ean2uaw7z9fhquefctj2z9r8psx0npt902c4sqqnptu = "signam1qq2lacvdahydn05jq4q5z5x2jh92xrn3arlwpal55lyr67mld3g5fmwzjxdd9vdnu59j7wc97nsg4k3dxhkw368me63yvsjt2q9egmcv0ydvdm"
