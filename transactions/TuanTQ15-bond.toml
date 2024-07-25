@@ -1,0 +1,48 @@
+[[established_account]]
+vp = "vp_user"
+threshold = 1
+public_keys = ["tpknam1qpf9vscntsdj8jhccxwpzr829fyrmqwkunnxxlquwshec3h9saehz7ysu5g"]
+
+[[validator_account]]
+address = "tnam1qynlgtyxvv5apfpf23dfx2788jfv6uzwdqw0mvsv"
+vp = "vp_user"
+commission_rate = "0.05"
+max_commission_rate_change = "0.01"
+net_address = "65.21.102.153:18656"
+
+[validator_account.consensus_key]
+pk = "tpknam1qqc8s22n2js35tz3lnpg35320c63kke834calcvcav5jrsvjr0mz79t8w2p"
+authorization = "signam1qrhyj8x0yvdw8gp4r7ceqxpxnpm60p00ha5hdfp3kw0zvdrgv70jzkyuv2qw05gt5f6l65tgpqfwv25uhupryy78r9k7nwrf6hvz09cznlp9gd"
+
+[validator_account.protocol_key]
+pk = "tpknam1qq9nyk4hshhumx8z3yw77avku0mgkzfkry99ugzsg875lc3l3lu8y0xtp9l"
+authorization = "signam1qzgjyef37slfc6t82jr2qnnvueg99ne32faddaewq5s2nqf9tztdtycn2z82l9t3cvvj7e4gt0c7qprucxcf3w852ur79x8l63up2zsw5gq5ch"
+
+[validator_account.tendermint_node_key]
+pk = "tpknam1qrk608dv0clnjcstvg3juf887xvj4rx5kdzwskrjquucky4pelvxx9rp8l4"
+authorization = "signam1qz22wmv0ty4wt80sc35y5t8mzp8l5kvdh2cg7zveqd93mhqul0u0q4wrvhmclnw4z73pelveq8udldu96qn8vhrv8ztg5997h83av3cwqx6tkq"
+
+[validator_account.eth_hot_key]
+pk = "tpknam1qypass6szkxpsds8p07wge9cn5f0y22jx3neftq0l66x8u0c7l7tk6gyhtv4v"
+authorization = "signam1qx4hyf2r9jdyalj0wx2ul9smsy6lxhc8nzzu6wmwnjrva5qsfd8g7l8fy2lsqys8zn6znhj7e0h2l8n6654fw9zl64w70m0ypscaqm8mqyksn3a6"
+
+[validator_account.eth_cold_key]
+pk = "tpknam1qyp9k573vae6ewnxm5tupt4jtsf8sgnrg9vwjlkvlpn4rscs9rzkj2smjr002"
+authorization = "signam1qxn3q85g79esvlj00nrvknq02v5kjnkxa3p23kxsr3jq7wkux6xmge08cljec7luzz68pk7527rvg0js07k0r2khufp4ed9q0glzcv6qqypeh3cs"
+
+[validator_account.metadata]
+email = "truongquoctuan61@gmail.com"
+description = "Hi I'm Hades "
+discord_handle = "hades99.hooked"
+name = "HadesGuard"
+
+[validator_account.signatures]
+tpknam1qpf9vscntsdj8jhccxwpzr829fyrmqwkunnxxlquwshec3h9saehz7ysu5g = "signam1qpdyjrf5tpjj734qn3m5v2xjvsl69jk22vfra5sywnv8yxfghwrhlxc2skmc6p3mmfuz85f8j98g8suqn2flgw3nvwx07wm5wpcsrxcxqr6tjd"
+
+[[bond]]
+source = "tpknam1qpf9vscntsdj8jhccxwpzr829fyrmqwkunnxxlquwshec3h9saehz7ysu5g"
+validator = "tnam1qynlgtyxvv5apfpf23dfx2788jfv6uzwdqw0mvsv"
+amount = "1000"
+
+[bond.signatures]
+tpknam1qpf9vscntsdj8jhccxwpzr829fyrmqwkunnxxlquwshec3h9saehz7ysu5g = "signam1qp00kflrxc89q90prnshcsggnpf3k05y0z9flaeqj4xajpvdjcjh8fxq85uz48vg9k2cph7zr5ydjwqu0lf5wryapyc3tpy2wt783js9wgqh6d"
