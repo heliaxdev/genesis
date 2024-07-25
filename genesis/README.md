@@ -8,4 +8,12 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla mauris magna, bla
 
 ## Validators
 
-There are no validators.
+
+- address: `tnam1q97g220afjdfcyfhk7rsmyu46xn82malpgp03rtt`
+    - alias: `Unknown alias`
+    - commission: `5.0%`
+    - max commission rate change: `1.0%`
+    - total voting power: `10000.0`
+    - email: `test1@gmail.com`
+    - website: `Unknown website`
+
