@@ -1,0 +1,43 @@
+[[established_account]]
+vp = "vp_user"
+threshold = 1
+public_keys = ["tpknam1qpdryctz27wy9tflf2yscu958hzk3z6ghsw6ec6mffh7t8pm4up0u6nppc6"]
+
+[[validator_account]]
+address = "tnam1q9whgzct6t2r62j7vyurc8djdfz406ejxquqz4pu"
+vp = "vp_user"
+commission_rate = "0.05"
+max_commission_rate_change = "0.01"
+net_address = "65.108.100.31:26656"
+
+[validator_account.consensus_key]
+pk = "tpknam1qpfde3nrvsfr9muk53cn45dpvcefmdmur6zgeux53gqsqgft58qsqe7h3r7"
+authorization = "signam1qz92st462vjmtmx5cjpy0s02wh4u8mj53qdyqjqwlug479pt6emp09swk6xcnfhkexjpqwyky5gn7wq9rvlu0h9a75jf244azm2atqcd8c764h"
+
+[validator_account.protocol_key]
+pk = "tpknam1qqv8l9gj9rvl2uu9ppvt279nlxypdct6vnleq637xya3qp8gy2y7xu5aenc"
+authorization = "signam1qr3mjwcq8zea8td88962paeqf5v90ngup3dm2q3wqwxvs0cc60ug7r3g2xuercsv22se47v0atzy3nxuttrgnyd23fqlp30qljqnmxgtsxc6mj"
+
+[validator_account.tendermint_node_key]
+pk = "tpknam1qp27l66hxdefwmsfqwj7hh2384ch69tf657y34vy60f8lglqlwsd504wcj4"
+authorization = "signam1qzltl0efuktsweueu9jl7ta48rvxstfy8mjl8ldwknsmcuhfkt8uuxyxgpcphags6psn558d7qw3ulsrqqwxjc9w7wucz4kkn32yz5szqqv529"
+
+[validator_account.eth_hot_key]
+pk = "tpknam1qyp4ettw42gg9hsy3jn65eunpfp6xpvtfr4e58t5nlc9y5zlq37l7ys8qk8cy"
+authorization = "signam1qyswz8pshqx2d9ydf0zec6vgxw67w5hu7qgypzkkxz77t9mpkxx029qjtawp79f465qg8yuyd4sgc8mv768r4nw5uc7p7jnrjr53zgufqygl3apr"
+
+[validator_account.eth_cold_key]
+pk = "tpknam1qyp2gum3ecezshv3uqzdw7gj3fmkedvhgddcr3ya4psc48rcxh2megca8gs9k"
+authorization = "signam1q9c29qeghfkx0ekywz9wwm3ypzu24qr9fn7263pq60pgy5gwpgm6g6qw7g7rlaa6y8vvekhpt2xsxfkkx7hgm5wqxaeac3pv70dea37aqyws2h9e"
+
+[validator_account.metadata]
+email = "hidden@gm.co"
+description = "empty"
+website = "https://mellifera.network/"
+discord_handle = "ruslan_mellifera"
+avatar = "https://img.freepik.com/free-photo/close-up-portrait-beautiful-cat_23-2149214419.jpg"
+name = "MELLIFERA"
+
+[validator_account.signatures]
+tpknam1qpdryctz27wy9tflf2yscu958hzk3z6ghsw6ec6mffh7t8pm4up0u6nppc6 = "signam1qrekrfdrr05sffv4hgjume3fgny5g778qwlw2qqvcjrewl3myslsylq4gm6xn65k5sck7r44sf6mx7p50q4emnwga5qvp5e3mn5fg6qgct9l22"
+
