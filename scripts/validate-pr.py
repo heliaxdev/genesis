@@ -24,7 +24,7 @@ def check_deleted_and_modified_files(alias):
     
     files = list(map(lambda file_path: file_path.decode(), res.stdout.splitlines()))
     for file in files:
-        file_alias = file.split('/')[1].split('.')[0]
+        file_alias = get_alias_from_file(file)
         if alias.lower() != file_alias.lower():
             print(alias, file_alias)
             exit(1)
@@ -44,11 +44,15 @@ def read_unsafe_toml(file_path):
         return None
     
 
-def get_alias():
+def get_alias_from_env():
     alias = os.environ.get("ALIAS")
     if alias is None:
         exit(1)
     return alias
+
+
+def get_alias_from_file(file):
+    return file.split('/')[1].removesuffix("-validator.toml").removesuffix("-account.toml").removesuffix("-bond.toml")
 
 
 def check_if_account_is_valid(accounts_toml: List[Dict]):
@@ -211,7 +215,7 @@ def validate_toml(file, can_apply_for_validators, can_apply_for_bonds, can_apply
     print("{} is valid.".format(file))
 
 def main():
-    alias = get_alias()
+    alias = get_alias_from_env()
     check_deleted_and_modified_files(alias)
     
     can_apply_for_validators, can_apply_for_bonds, can_apply_for_accounts = read_env()
@@ -226,7 +230,7 @@ def main():
             print("{} doesn't match pattern {}".format(file, FILE_NAME_PATTER))
             exit(1)
 
-        file_alias = file.split('/')[1].split('.')[0]
+        file_alias = get_alias_from_file(file)
         if not alias.lower() in file_alias.lower():
             exit(1)
 
