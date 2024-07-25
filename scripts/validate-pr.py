@@ -17,14 +17,16 @@ def read_env():
     return can_apply_for_validators, can_apply_for_bonds, can_apply_for_accounts
 
 
-def check_no_deleted_or_modified_files():
+def check_deleted_and_modified_files(alias):
     res = subprocess.run(["git", "diff", "--name-only", "--diff-filter=DM", "origin/main"], stdout=subprocess.PIPE, stderr=subprocess.PIPE)
     if res.returncode > 0:
         exit(1)
     
-    deleted_files = list(map(lambda file_path: file_path.decode(), res.stdout.splitlines()))
-    if deleted_files:
-        exit(1)
+    files = list(map(lambda file_path: file_path.decode(), res.stdout.splitlines()))
+    for file in files:
+        file_alias = file.split('/')[1].split('.')[0]
+        if alias != file_alias:
+            exit(1)
 
 def get_all_created_files():
     res = subprocess.run(["git", "diff", "--name-only", "--diff-filter=A", "origin/main"], stdout=subprocess.PIPE, stderr=subprocess.PIPE)
@@ -208,11 +210,11 @@ def validate_toml(file, can_apply_for_validators, can_apply_for_bonds, can_apply
     print("{} is valid.".format(file))
 
 def main():
-    # check_no_deleted_or_modified_files()
+    alias = get_alias()
+    check_deleted_and_modified_files(alias)
     
     can_apply_for_validators, can_apply_for_bonds, can_apply_for_accounts = read_env()
     changed_files = get_all_created_files()
-    alias = get_alias()
 
     print("Found {} file changed/added.".format(len(changed_files)))
     
@@ -228,7 +230,7 @@ def main():
             exit(1)
 
         print("{} is allowed, checking if its valid...".format(file))
-
+    
         validate_toml(file, can_apply_for_validators, can_apply_for_bonds, can_apply_for_accounts)
 
 
