@@ -1,0 +1,41 @@
+[[established_account]]
+vp = "vp_user"
+threshold = 1
+public_keys = ["tpknam1qpp6uzmmh2n2nmmgsewjwfsywctjx9tye9knh6kw9n893elsemt26q7jmg2"]
+
+[[validator_account]]
+address = "tnam1qx2hvawznw3kj63xl8smc65kw543e3t6h5lend0a"
+vp = "vp_user"
+commission_rate = "0.05"
+max_commission_rate_change = "0.01"
+net_address = "65.108.100.97:26656"
+
+[validator_account.consensus_key]
+pk = "tpknam1qzjasy7gglw3f9ywdxzzccayuua9nlzmqddrk84vkacvc27vdvtvzfcsjsp"
+authorization = "signam1qqsjht5pxlzvuvk3tg97kz6cevs7l2zfkgee39zv8g6dtrcqltkj3g7vqefsy8vjhcx2fm7c9trcqhy04npdqsu36nyzlawemh5tkugg0zhj96"
+
+[validator_account.protocol_key]
+pk = "tpknam1qr4j2w3c6xh3uf9tn2kwrpdusjqhg3pxavtadmm6nu6hzfjv5rv4qwefaa8"
+authorization = "signam1qrtl3fp34z4h9cknxlmz3n72muypnfgpj07ld8hxhd962cd8qehlqccj2kd3444wwyylgt6u8ceuqkrgddjg09qqrm5rtdrc70eccwqgf8re6d"
+
+[validator_account.tendermint_node_key]
+pk = "tpknam1qzmh7xxzus4flhk0p5jkcrq7mzjszx0xedd5jc3q2s0xsgz3rmugya7ah0w"
+authorization = "signam1qr0lwq2vfueev55vuqddznm72fav3pcxsxfpqtn7px48dw0t3px7ufmwh2xf3awdu2643lzmz3fzaptrkpcx8g7ruqt45uevm2r4ncsqc48put"
+
+[validator_account.eth_hot_key]
+pk = "tpknam1qypql26fg0tufuvjqzcdhfeg44e3r9kjd87ekk8psc5k28zlk393xes8nhr3x"
+authorization = "signam1qy53dfh380694hrqqdvtnfdtw6dharnzxa403kl4t2f4nf7ssap3g4nqh0t3gx5p0fswl7tll5vvdvkrpdylkas0u0e4q7qjsazv4vupqy6q0wyp"
+
+[validator_account.eth_cold_key]
+pk = "tpknam1qypz3tqsr4e8z92sz0z34x85lcvfp2s7kvylag7zx6np0na8aqywp9qauq8sp"
+authorization = "signam1q8x30g8lay3jlt3wf5m3esfg7p5fnff4yd3w7rswvrn6nc3lqyc5xy9ka5s45vugy2yhkjnrdp7cmzwmp6azgxhhfhagfdqlc5q0shkyqqkket82"
+
+[validator_account.metadata]
+email = "info@l0vd.com"
+description = "Professional validating,infrastructure and staking provider. More than 50 networks contributed. With L0ve."
+website = "https://chain-services.l0vd.com/"
+discord_handle = "https://chain-services.l0vd.com/"
+name = "L0vd"
+
+[validator_account.signatures]
+tpknam1qpp6uzmmh2n2nmmgsewjwfsywctjx9tye9knh6kw9n893elsemt26q7jmg2 = "signam1qzsvm9d2ljveacfqstxg3unz73khcwp5swwpxkk7ajshw4jw2rcazjhytx2yryqq999qq8704la7clwy8k293j4femxg4nhu8lh2p4sda7gz25"
