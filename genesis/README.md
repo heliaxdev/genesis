@@ -2,7 +2,7 @@
 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla mauris magna, blandit non posuere a, tempor vel nibh. Integer lacinia quam tempor hendrerit porta. Ut quis congue elit.
 
-## Voting power distribution
+## Voting power distrubiton
 
 ![Voting Power Distribution](../images/validators.png "Voting Power Distribution")
 
