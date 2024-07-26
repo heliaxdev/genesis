@@ -19,6 +19,14 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla mauris magna, bla
     - email: `admin`
     - website: `https://validatorvn.com`
 
+- address: `tnam1qynlgtyxvv5apfpf23dfx2788jfv6uzwdqw0mvsv`
+    - alias: `Unknown alias`
+    - commission: `5.0%`
+    - max commission rate change: `1.0%`
+    - total voting power: `1000.0`
+    - email: `truongquoctuan61@gmail.com`
+    - website: `Unknown website`
+
 - address: `tnam1q97g220afjdfcyfhk7rsmyu46xn82malpgp03rtt`
     - alias: `Unknown alias`
     - commission: `5.0%`
