@@ -51,6 +51,14 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla mauris magna, bla
     - email: `hey@mail.com`
     - website: `https://mandragora.io`
 
+- address: `tnam1q8lpfs90a5kjx83al0m9hg9w7v2u870nau4y3wyy`
+    - alias: `Unknown alias`
+    - commission: `5.0%`
+    - max commission rate change: `1.0%`
+    - total voting power: `900000.0`
+    - email: `nick@totalgaming.io`
+    - website: `Unknown website`
+
 - address: `tnam1qyjs6q5sq7jhtnzg7ss837umyl0gugz7uuqfaus8`
     - alias: `Unknown alias`
     - commission: `5.0%`

@@ -310,6 +310,18 @@ tpknam1qzfj8yk4eqmwy9fewfq4p9kcfcrl5yzgkqve0duqxee6ys8zcw7pcpcwaqk = "signam1qzr
 
 
 
+# adding transaction for nick-u410-bond
+
+[[bond]]
+source = "tpknam1qzgg532qj2e75pd9mkg6m4s2qellsrwu7rehzrpsywvd07l5elyr7s7588y"
+validator = "tnam1q8lpfs90a5kjx83al0m9hg9w7v2u870nau4y3wyy"
+amount = "900000"
+
+[bond.signatures]
+tpknam1qzgg532qj2e75pd9mkg6m4s2qellsrwu7rehzrpsywvd07l5elyr7s7588y = "signam1qp02h5y2h8w2206pf80wypexhk85geslfjfl6uhccfk9t7nkuqde0tdl9htd9m4jrpg2u6xeq32gxhssd47mveavw57xpfhg9cl83gqfl83g4p"
+
+
+
 # adding transaction for validatorvn-validator
 
 [[established_account]]
@@ -508,3 +520,47 @@ amount = "999995"
 
 [bond.signatures]
 tpknam1qqephjg5pgnyn4p9ean2uaw7z9fhquefctj2z9r8psx0npt902c4sqqnptu = "signam1qrjaykvwhrxw79fza7egtgl5hmkk30jtu2h2uzppfgqk0c4g4ldqfer24sar5hnj2uq877fjatjvtj6vkpke6h6hyquj49xhx8c2v7qxeyqcrj"
+
+
+# adding transaction for nick-u410-validator
+
+[[established_account]]
+vp = "vp_user"
+threshold = 1
+public_keys = ["tpknam1qzgg532qj2e75pd9mkg6m4s2qellsrwu7rehzrpsywvd07l5elyr7s7588y"]
+
+[[validator_account]]
+address = "tnam1q8lpfs90a5kjx83al0m9hg9w7v2u870nau4y3wyy"
+vp = "vp_user"
+commission_rate = "0.05"
+max_commission_rate_change = "0.01"
+net_address = "34.125.149.245:26656"
+
+[validator_account.consensus_key]
+pk = "tpknam1qq4gc2dym9mrz6r9g5vfyuadxgjn5d062kchrpj2jr2ygwswpxg6jum8t9s"
+authorization = "signam1qp844r7c49ra54st5tjc6kmydkf5usttsvj8l4qt7tuqqdvmm3xcrwgq4jh7cgse0mc498ngfhzzx2cekyrcc5p8zenc7dje3l9xunq8s0nnl7"
+
+[validator_account.protocol_key]
+pk = "tpknam1qpy5s6usqsawguvrrg4sxk4c04d3nyfsj6wk8lqttt6ypl4e879wx0a76zp"
+authorization = "signam1qp8v9v0rmrn9c6kd060yadupwsvj5ml6pqjws49dtpus7hwv3jk9wlwa96h76jg5u9vjr30xmhtrncn9u8rwv57naq79p4canl0phjs2uanmn6"
+
+[validator_account.tendermint_node_key]
+pk = "tpknam1qq804s5h3970rnhv5twcgkagk6n2wfqgjv8pcrc76jhfhx7mfkm42yh9tle"
+authorization = "signam1qpg536g3jr0qrsceest58988lcseznqzfu9zwg0pqzk4e66uxkmvm3j99692twk2qh445t8pw8z0w0pc0jzccsaas6mys029fyk2e3src4h85z"
+
+[validator_account.eth_hot_key]
+pk = "tpknam1qypmqnyvrxjj87tq6qpd304dmq6cl8pk3kmfn5vnx5wvmuw2fdvu39c9djqxh"
+authorization = "signam1qx27zgdraulnktm3tqv343q98kt7ksjrllmsufq2r9u2cruhgkrhsswdvph8wsfhzn9j3mpkfhx2lw3pv8lspyjk06qkdw4pqqfk73a9qyry22wv"
+
+[validator_account.eth_cold_key]
+pk = "tpknam1qyp5ptkrjd07ndfvyf28cctxf8lrh4e3jefw84wtt2897qyehap60asxhmz3m"
+authorization = "signam1qydff9czxm6rg7espf5p2c5f6gaysh2kl2lm5emkgsmuklzmj8h6yhpq3s4gwf2eu3vt57ll9a0me6mptksta2ry97r3gv7sm8akwsmwqqm5u0gt"
+
+[validator_account.metadata]
+email = "nick@totalgaming.io"
+discord_handle = "nick.u410"
+name = "u410"
+
+[validator_account.signatures]
+tpknam1qzgg532qj2e75pd9mkg6m4s2qellsrwu7rehzrpsywvd07l5elyr7s7588y = "signam1qrhg50wveta5pmp0f0l4ug0tpc0n4l3xauguccfjkdx9d5jyjn95dcd5hpa5yrxps6ympvnae82m58jxwmsljwwarrjhnv0ku246htqx4d3m2v"
+
