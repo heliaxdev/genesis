@@ -1,0 +1,42 @@
+[[established_account]]
+vp = "vp_user"
+threshold = 1
+public_keys = ["tpknam1qpqywddgdmvelf3a7ccfn55rln67526yq4j8ukxdzadahnfk893s2cyq3te"]
+
+[[validator_account]]
+address = "tnam1q80xwhew6mlgfecdzqp3ls5j0qgamjyhjv6urypv"
+vp = "vp_user"
+commission_rate = "0.05"
+max_commission_rate_change = "0.01"
+net_address = "5.9.95.101:26656"
+
+[validator_account.consensus_key]
+pk = "tpknam1qry8zn7cf5f2hc8qd982mezq53hn43vqkhe42ztaj6phy3fq7040yl5dda5"
+authorization = "signam1qrlmjsem7eq9gew6rnn4fsxpz4tecxxkknvy5k5xh4kdw0elvkrvv0zkl4daljhtgwwf436fsm7x4uvg3zpfsfjc3d0ggclfv7tpresqvp67pv"
+
+[validator_account.protocol_key]
+pk = "tpknam1qppt8um7enga9s3h9fv823h0gcuddwg9zguj9q44waj9pqax82jyc3z7wtg"
+authorization = "signam1qplx9se6p69kt3hjn4z52mcgpte6k9p3lvcwyjmw8t8ew0ekuvmdtlk3c47ar0jnmt2nylysg4p8g9p84n6jfhf5svad4qh7xjp68uqr7nhnud"
+
+[validator_account.tendermint_node_key]
+pk = "tpknam1qzmuel4gd2azp2ncyy84jxg54zpmsmlkrmce3xtlqurw3m29r7vnya5e6a4"
+authorization = "signam1qrrumfw5kcwrf7xx6ds0gzqelz3xa4g3t3nzepa6axwx6fg5x2cyxkn0wx7mvavppgdpgpewq0lmjhz3su6c0exg0852euwgcnp3sqg05p2gjq"
+
+[validator_account.eth_hot_key]
+pk = "tpknam1qyppz3m6ezp47k5wkurt272d439e20hkqne7g6ev9df68s0d0upq9rszvwtrc"
+authorization = "signam1qy0u8g057q66spsurj5aduqtweh99rvdkzxlp0efsmm776f9xcdjuz3twv06cgnxcyv98l983pp44x07w5jljlfrjsz88c6x3dszkd00qylt7v9x"
+
+[validator_account.eth_cold_key]
+pk = "tpknam1qypg2fyg4jtevls9ssup544wepwd0l2he5wxvyzm2a4epqx8xfurf2gr5nn44"
+authorization = "signam1qyhajjqn5gdsazdqdvphfu0q34ctxfqde6q4x299hpcyy3vs54fesdrv6lpn0nqra6uzxxwj0xkcge4ak2gnrjl8v2vmmrucqqy6lhd0qyqn6fty"
+
+[validator_account.metadata]
+email = "antons.kurakins@crouton.digital"
+description = "Your everyday crypto partner"
+website = "https://crouton.digital/"
+discord_handle = "ak32821"
+avatar = "https://github.com/Crouton-Digital/Eigenlayer/blob/main/logo.png?raw=true"
+name = "CroutonDigital"
+
+[validator_account.signatures]
+tpknam1qpqywddgdmvelf3a7ccfn55rln67526yq4j8ukxdzadahnfk893s2cyq3te = "signam1qp39r56masazwhyfp8nsygg3mvlp0sqf48h65k9mkxjcdh3mwxsgpqug74nx9c06teatvprxkxztcaw404dzjvne9s63aprucrhzqnq8rmxd2r"
