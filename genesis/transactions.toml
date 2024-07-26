@@ -153,6 +153,50 @@ name = "HadesGuard"
 tpknam1qpf9vscntsdj8jhccxwpzr829fyrmqwkunnxxlquwshec3h9saehz7ysu5g = "signam1qpdyjrf5tpjj734qn3m5v2xjvsl69jk22vfra5sywnv8yxfghwrhlxc2skmc6p3mmfuz85f8j98g8suqn2flgw3nvwx07wm5wpcsrxcxqr6tjd"
 
 
+# adding transaction for opsecx-validator
+
+[[established_account]]
+vp = "vp_user"
+threshold = 1
+public_keys = ["tpknam1qqetcqftr9qmgpuphxd6m9586ymhz3wpev9rufpzlmhu72tqhvnd2ye2fa2"]
+
+[[validator_account]]
+address = "tnam1qyjs6q5sq7jhtnzg7ss837umyl0gugz7uuqfaus8"
+vp = "vp_user"
+commission_rate = "0.05"
+max_commission_rate_change = "0.01"
+net_address = "38.242.213.92:26656"
+
+[validator_account.consensus_key]
+pk = "tpknam1qrphr2ue7uf8xm29x75jqhq5eyvqd3ajevq8csngh5uk5a5fqghqg78dr5s"
+authorization = "signam1qpdu2qfk6nxd3rf9xpn4xp82kq2suagelj3kumj0877v6vt5xjud0rnya9psjvqmygp6a2nvvh9ll03guughdh5s9qwfx0lufk86w4sy88ytwh"
+
+[validator_account.protocol_key]
+pk = "tpknam1qrzw8r4a3y7mrgt7uzlkk0424wspq69kzwmxy9724580g3nnl604qukls5v"
+authorization = "signam1qpfm975n7tw5nehtft7tdcz4q3sk3630cyelj0k9u40lwujsxpymms5ukekvudgxm3unewqe4prm9yk4n62c6txy28xl8y0swkaw68cfxvtvx2"
+
+[validator_account.tendermint_node_key]
+pk = "tpknam1qrfrddtn6z4yh2w296zzmhjk25zl9s48305l7rykmt83wxfmjysj5dek9sx"
+authorization = "signam1qz3qxrchfufcvhdzuv5x7ejstw5unj7d4fqvne7jg83gd8k6pcdh03nevmv7wppuwnq9k3586pwwvazrcvuc9sk6nga8kshgmyjkn5cy84xevn"
+
+[validator_account.eth_hot_key]
+pk = "tpknam1qypnqktpqp8hxu9k4ckztqq45d48f9tk30uzf4mh0q020w2ttrv6awqu4mesj"
+authorization = "signam1qxynp7jeexeww7tj5uyty3edmt07ae3lah3aq045er3caqtqvh4gvessqfcxp377m0qcn6vsdvm3xdrng6uatdqguqvmdc0v4fmtlwe3qyj56evy"
+
+[validator_account.eth_cold_key]
+pk = "tpknam1qypaj75vxcv6fu4u0zeagxfmz3809yexm0cq8wt6dg0ww29dd9u0k9s89w93r"
+authorization = "signam1qy6ra2s6ejck9yuqg6vplmwhhtqjychyk4husp6edgtwh4m5lmwqknr8wsexl7rcvrm03g0xdj3ypjkcz9786kzwxpmwh7xf08g33u36qq23lyar"
+
+[validator_account.metadata]
+email = "thenamidator@protonmail.com"
+description = "the best namidator around"
+name = "thenamidator"
+
+[validator_account.signatures]
+tpknam1qqetcqftr9qmgpuphxd6m9586ymhz3wpev9rufpzlmhu72tqhvnd2ye2fa2 = "signam1qpgvnsv3v24npuz03kf69wykyp7fz47vty2m7mvfsnggvyclgq2g8hjcsdp6x6y4gqxysdjuc4fvlu5d4w9suamtp34qd7ws4fz2xws9gq6yxm"
+
+
+
 # adding transaction for validatorvn-validator
 
 [[established_account]]
@@ -281,4 +325,16 @@ amount = "50"
 
 [bond.signatures]
 tpknam1qzjtm7t8gs8k4cm2uhnkm0flydefflyvd3q7c2eq28lepzh9xylqvlen8hq = "signam1qp32mkcqk023avqlx5zdjk6rk0je6k0qg5qad875qkcgzz7yggx7ke0524mf9354tscgjgnhf0lrmlpl0gpgjme3vdptqxv7hg9tcmggvk8f6k"
+
+
+
+# adding transaction for opsecx-bond
+
+[[bond]]
+source = "tpknam1qqetcqftr9qmgpuphxd6m9586ymhz3wpev9rufpzlmhu72tqhvnd2ye2fa2"
+validator = "tnam1qyjs6q5sq7jhtnzg7ss837umyl0gugz7uuqfaus8"
+amount = "999000"
+
+[bond.signatures]
+tpknam1qqetcqftr9qmgpuphxd6m9586ymhz3wpev9rufpzlmhu72tqhvnd2ye2fa2 = "signam1qp3ye6vjf5apc6wpglwxz4tpvggx9hzem36xz4gnjxczuuhrdwuwvm7nwxgysnvymy6ss7l3hk6xcnggevnsus3uz8txnayu4q4xuhq2eyauzf"
 

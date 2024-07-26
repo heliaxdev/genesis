@@ -43,6 +43,14 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla mauris magna, bla
     - email: `hey@mail.com`
     - website: `https://mandragora.io`
 
+- address: `tnam1qyjs6q5sq7jhtnzg7ss837umyl0gugz7uuqfaus8`
+    - alias: `Unknown alias`
+    - commission: `5.0%`
+    - max commission rate change: `1.0%`
+    - total voting power: `999000.0`
+    - email: `thenamidator@protonmail.com`
+    - website: `Unknown website`
+
 - address: `tnam1q9whgzct6t2r62j7vyurc8djdfz406ejxquqz4pu`
     - alias: `Unknown alias`
     - commission: `5.0%`
