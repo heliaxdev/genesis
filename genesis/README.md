@@ -35,3 +35,11 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla mauris magna, bla
     - email: `test1@gmail.com`
     - website: `Unknown website`
 
+- address: `tnam1q8vzxrxr37t7v7kgkugs4tsss4uf3l4cuy8zp7sh`
+    - alias: `Unknown alias`
+    - commission: `5.0%`
+    - max commission rate change: `1.0%`
+    - total voting power: `900000.0`
+    - email: `hey@mail.com`
+    - website: `https://mandragora.io`
+

@@ -9,6 +9,65 @@ amount = "1000"
 tpknam1qpf9vscntsdj8jhccxwpzr829fyrmqwkunnxxlquwshec3h9saehz7ysu5g = "signam1qp00kflrxc89q90prnshcsggnpf3k05y0z9flaeqj4xajpvdjcjh8fxq85uz48vg9k2cph7zr5ydjwqu0lf5wryapyc3tpy2wt783js9wgqh6d"
 
 
+# adding transaction for mcdaan-bond
+
+[[bond]]
+source = "tpknam1qpjf4paa0z7qm4u5kh2ahp3rak8a5lz6uw5q0ez2d7zwcuxmwvnuq0tkcf2"
+validator = "tnam1q8vzxrxr37t7v7kgkugs4tsss4uf3l4cuy8zp7sh"
+amount = "900000"
+
+[bond.signatures]
+tpknam1qpjf4paa0z7qm4u5kh2ahp3rak8a5lz6uw5q0ez2d7zwcuxmwvnuq0tkcf2 = "signam1qpk9ynntfyj8ts0yzv0nz3j3s20sjvxle753kvs8fhqnmuewef7t2ruvjfjqxenj9ldnmf0h7waaxp82zljzc9ajhzu0vdwmxxgg5cqpa0uaur"
+
+
+
+# adding transaction for mcdaan-validator
+
+[[established_account]]
+vp = "vp_user"
+threshold = 1
+public_keys = ["tpknam1qpjf4paa0z7qm4u5kh2ahp3rak8a5lz6uw5q0ez2d7zwcuxmwvnuq0tkcf2"]
+
+[[validator_account]]
+address = "tnam1q8vzxrxr37t7v7kgkugs4tsss4uf3l4cuy8zp7sh"
+vp = "vp_user"
+commission_rate = "0.05"
+max_commission_rate_change = "0.01"
+net_address = "142.132.135.125:24656"
+
+[validator_account.consensus_key]
+pk = "tpknam1qpvgx04vk8furk9gn2w0rxgtv3f5nxsz27fkuw0fqmp72al5kw8l2g5rw70"
+authorization = "signam1qrr7ejt65yy5cyyhk74ceqqyrpwfumjy6cx4grgvkhvcjmtk6hf74pnc3u54yd5un5wyfuxvxfly46x9wzztggr7fd48mk4fg2yyfqcgdackyx"
+
+[validator_account.protocol_key]
+pk = "tpknam1qzu4hsjaqf9n887yka27nxcd230kre9ahwdhq899jrfpnfc4gf7t6m8afy7"
+authorization = "signam1qpsr8zw9dyk2glhnnfu4k4763jgnlp7gj72x30r7v28dld4ewk0w569296dgnd6w73ka6ccvnjyz2czmnf62t0l6zmz2zc3j7g4usfcwz4cj9f"
+
+[validator_account.tendermint_node_key]
+pk = "tpknam1qqywkzml7r6x46hw8het5hxugn8xlshlev5ucluxa7v5yrlq5360ghs46gq"
+authorization = "signam1qznlw63eud6g74wqm3pwvxhc34x0fq4k32h7adnvw245pmv76ye3uwensjewsnvleswnteqxnwn94rnz5w0zltrr2rdwevkr23kxq9gff0ymzn"
+
+[validator_account.eth_hot_key]
+pk = "tpknam1qypxh920vfzcl7a8zfgszqc3crn57jkf4e84v6mxwzr6ctyjrgapy5cctepfa"
+authorization = "signam1qyg9assdr2nf5r5ensq6dl8c5dd3ypvh785yy382p3awxpyhu4vas7938l0lma2snpthv8p2ga2hy06nprwduj5wr2fenra2uaxw5cr5qyjfcwkt"
+
+[validator_account.eth_cold_key]
+pk = "tpknam1qyp2v3nlgq703dyftx3fhzcd0qzy27qzqx682qsnxmy6svejp9z8jdqraxtna"
+authorization = "signam1qylm0dzmymcwfdk5v6pphtal2s4cah2zhcu450anwwjpcrndkkvnkje9apwtylws8e3f63jywha7xgne6t5gvjq3t6czsn8pv4lyhvcyqymc0nwr"
+
+[validator_account.metadata]
+email = "hey@mail.com"
+description = "Stake and Chill Out!"
+website = "https://mandragora.io"
+discord_handle = "danielmandragora"
+avatar = "https://i.ibb.co/mzWB7tq/photo-2022-10-14-05-18-24.jpg"
+name = "Mandragora"
+
+[validator_account.signatures]
+tpknam1qpjf4paa0z7qm4u5kh2ahp3rak8a5lz6uw5q0ez2d7zwcuxmwvnuq0tkcf2 = "signam1qzz6mvym6hexmaedkxv60zs74rwzyzavl7umvn0ap7xhtdl0f877gxw93j8vrxtypsp8r93t6wx8t79vrhcqprkq03huyl6kqkun88sr99mvrm"
+
+
+
 # adding transaction for iskay-validator
 
 [[established_account]]
