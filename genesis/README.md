@@ -43,6 +43,14 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla mauris magna, bla
     - email: `info@l0vd.com`
     - website: `https://chain-services.l0vd.com/`
 
+- address: `tnam1q80xwhew6mlgfecdzqp3ls5j0qgamjyhjv6urypv`
+    - alias: `Unknown alias`
+    - commission: `5.0%`
+    - max commission rate change: `1.0%`
+    - total voting power: `900000.0`
+    - email: `antons.kurakins@crouton.digital`
+    - website: `https://crouton.digital/`
+
 - address: `tnam1q8vzxrxr37t7v7kgkugs4tsss4uf3l4cuy8zp7sh`
     - alias: `Unknown alias`
     - commission: `5.0%`
