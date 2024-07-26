@@ -39,6 +39,53 @@ email = "test1@gmail.com"
 tpknam1qzctf9dlf4r27y4x9gj2xqsx4ukt5ljc9t5g4acv2gkm9meq402mx8aupqr = "signam1qrcdk684tyh6ce8ug8x8ggf8f43p2tn8wslnwahluwzjudsgsvcymedqdlflleawza9lm89ma4kc7x2nl4gvwenj8hmvc950z2u7a8grxh57j2"
 
 
+# adding transaction for validatorvn-validator
+
+[[established_account]]
+vp = "vp_user"
+threshold = 1
+public_keys = ["tpknam1qzjtm7t8gs8k4cm2uhnkm0flydefflyvd3q7c2eq28lepzh9xylqvlen8hq"]
+
+[[validator_account]]
+address = "tnam1qxf4u7cr7cv6r420yx9mhz2u9vgfefxh7g0txmyh"
+vp = "vp_user"
+commission_rate = "0.05"
+max_commission_rate_change = "0.01"
+net_address = "157.90.207.182:26656"
+
+[validator_account.consensus_key]
+pk = "tpknam1qqg5wf9lvvs6s3pgn7wtruqzg8anssndeprnwtcfej5rmn7cklwdx49qz04"
+authorization = "signam1qqzvjurtf5qgs9uwjk2h94h6d8vd4n9auqqxknrzdshjk5r358858fldhsrlem2z0f39aw43v5vcgzs5mqpetuwp0h752ytkxf6d6ucvnnefmd"
+
+[validator_account.protocol_key]
+pk = "tpknam1qpcyskmdjx6rxu7lkpnwzg0fge7235jt4rte7v4a3jf7rudygvuk7nzhpx4"
+authorization = "signam1qqm28fwyts3k4ruu44a49m636jugarn6kc7vzlkkc9tyqv6qpvtqlnnx4zglz5jnnretqrn57d3gcs5qv2ja8z4s6qraxy8p832sc8c83z8xxy"
+
+[validator_account.tendermint_node_key]
+pk = "tpknam1qqexkewut8sdk5gx3u28h4myu2v4tq7sflpaqypa85zph03988pjgvtu965"
+authorization = "signam1qrs8u7w5d6crt9hv802fak2arzn4k9vqwguvxq5a8a7mpy9en6qfafqy2qzpuwdvkwe7022jhmcxl3g20n6dfv2pcd5whwl2z4jlq3s9aphnyj"
+
+[validator_account.eth_hot_key]
+pk = "tpknam1qypcdg43qu2tqthkpxjkufsn49gfc00n4mrlf4u845lcxrh6rk74g3sylqh7v"
+authorization = "signam1q9nwxdj7p2z9l5ngn7328s220lu9ag4svdd5cgs0mnqhvlts3y9kv2n9tuclypng972m5qyvvpkar2cmszrdqp9z85jynyhe0cce990dqyd3wz6x"
+
+[validator_account.eth_cold_key]
+pk = "tpknam1qyp63zqk9gkvyt9k67z2enr96j8yfegdadcmpc3v394krnqgnj0lzxgtazynv"
+authorization = "signam1q8dkhm9lkkd77auz0ahe7j0s69q3pkmzlm86vg82prdyv5rqxpwcxjhx8m2wjt3ltfd9kvy4zcztar97wg46v8wael7sgayrph6nvxtjqqzqhnnx"
+
+[validator_account.metadata]
+email = "admin"
+description = "Test"
+website = "https://validatorvn.com"
+discord_handle = "validatorvn"
+avatar = "https://raw.githubusercontent.com/Dymioncloud/Logos/main/SG3ZfSyr_400x400.jpg"
+name = "ValidatorVN"
+
+[validator_account.signatures]
+tpknam1qzjtm7t8gs8k4cm2uhnkm0flydefflyvd3q7c2eq28lepzh9xylqvlen8hq = "signam1qzx6hucswvnexfkehcl0lulyek2mny5etwxc6we6ftuv03v93uj0r9y9d8lj4pppywpq435kppp5twfdcjrxfr3w02xax67ctj5uczsqvgdmqv"
+
+
+
 # adding transaction for iskay-bond
 
 [[bond]]
@@ -48,3 +95,15 @@ amount = "10000"
 
 [bond.signatures]
 tpknam1qzctf9dlf4r27y4x9gj2xqsx4ukt5ljc9t5g4acv2gkm9meq402mx8aupqr = "signam1qzqnd77jkevugqvp97kn59zaz62hz23pknxpt9vy6l385sdlqrjr2mmud520zqx9y7nmrcyw9e24ppns2rwlmt58ex2q6m5kgcf0lysxphqhmd"
+
+
+# adding transaction for validatorvn-bond
+
+[[bond]]
+source = "tpknam1qzjtm7t8gs8k4cm2uhnkm0flydefflyvd3q7c2eq28lepzh9xylqvlen8hq"
+validator = "tnam1qxf4u7cr7cv6r420yx9mhz2u9vgfefxh7g0txmyh"
+amount = "50"
+
+[bond.signatures]
+tpknam1qzjtm7t8gs8k4cm2uhnkm0flydefflyvd3q7c2eq28lepzh9xylqvlen8hq = "signam1qp32mkcqk023avqlx5zdjk6rk0je6k0qg5qad875qkcgzz7yggx7ke0524mf9354tscgjgnhf0lrmlpl0gpgjme3vdptqxv7hg9tcmggvk8f6k"
+
