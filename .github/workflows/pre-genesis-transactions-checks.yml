@@ -27,7 +27,7 @@ env:
 
 jobs:
   pr-check:
-    if: ${{ github.event_name == 'pull_request' || github.event_name == 'merge_group' }}
+    if: ${{ github.event_name == 'pull_request' }}
     name: Shallow PR check
     runs-on: ubuntu-latest
     steps:
