@@ -59,3 +59,11 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla mauris magna, bla
     - email: `hidden@gm.co`
     - website: `https://mellifera.network/`
 
+- address: `tnam1qyl03jqx3nafc2dcjgymx8jmc75ex946v56wangr`
+    - alias: `Unknown alias`
+    - commission: `5.0%`
+    - max commission rate change: `1.0%`
+    - total voting power: `999990.0`
+    - email: `tvboxsupreme@gmail.com`
+    - website: `Unknown website`
+

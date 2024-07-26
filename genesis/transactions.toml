@@ -197,6 +197,61 @@ tpknam1qqetcqftr9qmgpuphxd6m9586ymhz3wpev9rufpzlmhu72tqhvnd2ye2fa2 = "signam1qpg
 
 
 
+# adding transaction for sirouk-bond
+
+[[bond]]
+source = "tpknam1qzfj8yk4eqmwy9fewfq4p9kcfcrl5yzgkqve0duqxee6ys8zcw7pcpcwaqk"
+validator = "tnam1qyl03jqx3nafc2dcjgymx8jmc75ex946v56wangr"
+amount = "999990"
+
+[bond.signatures]
+tpknam1qzfj8yk4eqmwy9fewfq4p9kcfcrl5yzgkqve0duqxee6ys8zcw7pcpcwaqk = "signam1qpm4sxleksfe8wfflgpn2dw04wnhh8c59kx6m226r6pgs78sw2xhu820pkjjv86pe8cd8xgfc5fkpuadtma4qswz74yv73rfr3mpe9cwz9mcgk"
+
+
+
+# adding transaction for sirouk-validator
+
+[[established_account]]
+vp = "vp_user"
+threshold = 1
+public_keys = ["tpknam1qzfj8yk4eqmwy9fewfq4p9kcfcrl5yzgkqve0duqxee6ys8zcw7pcpcwaqk"]
+
+[[validator_account]]
+address = "tnam1qyl03jqx3nafc2dcjgymx8jmc75ex946v56wangr"
+vp = "vp_user"
+commission_rate = "0.05"
+max_commission_rate_change = "0.01"
+net_address = "74.50.93.254:26656"
+
+[validator_account.consensus_key]
+pk = "tpknam1qq04cylrp7ge3ajtvedsynr2g6cq4vz8v8g9m5e9kkfu87v2082qz3gdrm2"
+authorization = "signam1qphg3l49dpe3jkmh545llxldvml6370wny4zav3caef54899xlnlskrecjdnqq6qn6w524qwacwkhuat6c5ay7v0pazr0mkgp0za96qzmy0maa"
+
+[validator_account.protocol_key]
+pk = "tpknam1qr20hjm27q9rdnnpuy7d8z3ml6qnvdhr640ujukjrmc39fn02ts2jhuljwc"
+authorization = "signam1qz2q6l5nvwzeceyz7uja2gq8xvyltd96z9pfx6uz4rl7gmyhrtewxwwylm3a3926zre4rqekuqdalxd7edzrkenc5ns49avqjz22h6cr026n8l"
+
+[validator_account.tendermint_node_key]
+pk = "tpknam1qp00v0akpf4cw2tr2767ucxgkpmsskkjlphw7t08q2xsnrhlsf22z34e3t7"
+authorization = "signam1qrs5z0esx3te05pckpwygj2fg6lrl4wp7ek2nvqzg5reh7p5unr3d3c4ku3z0dntgeg5ta0wp6vaxs3pv7c3el85rwdgqsj4peq23mcvj0dn47"
+
+[validator_account.eth_hot_key]
+pk = "tpknam1qypuuy59yw2uau38wh3e9nr6u644kh5thskulj3rlrevyqzzd7wendcklqlgs"
+authorization = "signam1q8x5l5s3988q6mem5cz3af2ch68f4vhlvxjdp50up6aq4xxy879y2ljvqcq8d56ndk07ux2ptg97y8mtvzgvmttds7nr60k6wpgxeverqqy0sk4g"
+
+[validator_account.eth_cold_key]
+pk = "tpknam1qypww5w3rj58plkpumec27xt3g54k55hmrvuef4cn9t0pjvvmf94dnsv3aasq"
+authorization = "signam1qy0p35ftn7sagxtv4cdw6gzvwfm5vlr06rvekmll30a8axm6nd7hses3uxdhcpar8zjd7nw3fmslxdrdqj90hp33d0djan5txthzry7wqqgqrk9v"
+
+[validator_account.metadata]
+email = "tvboxsupreme@gmail.com"
+discord_handle = "sirouk"
+
+[validator_account.signatures]
+tpknam1qzfj8yk4eqmwy9fewfq4p9kcfcrl5yzgkqve0duqxee6ys8zcw7pcpcwaqk = "signam1qzr6klyc4uy6lcnw6ereq7gw9panprwk6vepz80a52as3zg0kvqeuunc6uany6dcl35q3qurk6gl45dr8eyyfe5jenv97ltj7s57vacw0gh07a"
+
+
+
 # adding transaction for validatorvn-validator
 
 [[established_account]]
