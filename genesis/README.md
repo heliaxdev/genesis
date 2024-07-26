@@ -75,3 +75,11 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla mauris magna, bla
     - email: `tvboxsupreme@gmail.com`
     - website: `Unknown website`
 
+- address: `tnam1q8h9akjgy7s8zj7elj08d8lzrqr3w0cc9gplkaq2`
+    - alias: `Unknown alias`
+    - commission: `5.0%`
+    - max commission rate change: `1.0%`
+    - total voting power: `999995.0`
+    - email: `hi@originstake.com`
+    - website: `https://originstake.com`
+
