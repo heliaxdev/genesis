@@ -80,7 +80,7 @@ def parse_validators():
                 'voting_power': target_vp[validator['address']] if validator['address'] in target_vp else 0
             })
 
-    return sorted(validators, key=lambda d: d['voting_power'])
+    return sorted(validators, key=lambda d: d['voting_power'], reverse=True)
 
 
 def merge_transactions():
