@@ -73,7 +73,7 @@ jobs:
       - uses: sigoden/install-binary@v1
         with:
           repo: anoma/namada
-          tag: v0.40.0
+          tag: v0.43.0
           name: namadac
       - name: Set up python
         id: setup-python

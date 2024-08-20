@@ -29,6 +29,9 @@ def build_readme(validators):
     with open("genesis/README.md", mode="w", encoding="utf-8") as message:
         message.write(content)
 
+    with open("README.md", mode="w", encoding="utf-8") as message:
+        message.write(content)
+
 
 def read_unsafe_toml(file_path):
     try:
