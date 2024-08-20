@@ -9,7 +9,7 @@ If you need help, feel free to [reach out on discord](https://discord.gg/AsPCKgW
 ## Voting power distribution
 
 
-![Voting Power Distribution](../images/validators.png "Voting Power Distribution")
+![Voting Power Distribution](images/validators.png "Voting Power Distribution")
 
 
 ## Validators
