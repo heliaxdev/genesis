@@ -1,6 +1,10 @@
 # Namada Mainnet Genesis files
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla mauris magna, blandit non posuere a, tempor vel nibh. Integer lacinia quam tempor hendrerit porta. Ut quis congue elit.
+The set of parameters and transactions that will create the namada genesis file.
+
+If you have received an allocation, check the [docs on how to make a pre-genesis transaction.](https://docs.namada.net/networks/starting-network/genesis-flow/participants)
+
+If you need help, feel free to [reach out on discord](https://discord.gg/AsPCKgW3)!
 
 ## Voting power distribution
 
@@ -27,14 +31,6 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla mauris magna, bla
     - email: `tvboxsupreme@gmail.com`
     - website: `Unknown website`
 
-- address: `tnam1qyjs6q5sq7jhtnzg7ss837umyl0gugz7uuqfaus8`
-    - alias: `Unknown alias`
-    - commission: `5.0%`
-    - max commission rate change: `1.0%`
-    - total voting power: `999000.0`
-    - email: `thenamidator@protonmail.com`
-    - website: `Unknown website`
-
 - address: `tnam1q9whgzct6t2r62j7vyurc8djdfz406ejxquqz4pu`
     - alias: `Unknown alias`
     - commission: `5.0%`
@@ -42,6 +38,14 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla mauris magna, bla
     - total voting power: `999000.0`
     - email: `hidden@gm.co`
     - website: `https://mellifera.network/`
+
+- address: `tnam1qyjs6q5sq7jhtnzg7ss837umyl0gugz7uuqfaus8`
+    - alias: `Unknown alias`
+    - commission: `5.0%`
+    - max commission rate change: `1.0%`
+    - total voting power: `999000.0`
+    - email: `thenamidator@protonmail.com`
+    - website: `Unknown website`
 
 - address: `tnam1q80xwhew6mlgfecdzqp3ls5j0qgamjyhjv6urypv`
     - alias: `Unknown alias`
