@@ -26,9 +26,6 @@ def build_readme(validators):
 
     content = template.render({"validators": validators})
 
-    with open("genesis/README.md", mode="w", encoding="utf-8") as message:
-        message.write(content)
-
     with open("README.md", mode="w", encoding="utf-8") as message:
         message.write(content)
 
